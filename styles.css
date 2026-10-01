@@ -1,0 +1,67 @@
+.alert {
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  color: white;
+}
+.alert.info {
+  background-color: #ff4d4d;
+}
+.alert.success {
+  background-color: #55ff00;
+}
+.alert.warning {
+  background-color: #ffaa00;
+}
+.alert.danger {
+  background-color: #007fff;
+  animation: danger-border 1s infinite;
+}
+@keyframes danger-border {
+  0% {
+    border: 3px solid transparent;
+  }
+  50% {
+    border: 3px solid red;
+  }
+  100% {
+    border: 3px solid transparent;
+  }
+}
+.card-3 {
+  font-size: 22px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.card-2 {
+  font-size: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.card-1 {
+  font-size: 18px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.tarjeta-clara {
+  background-color: white;
+  color: black;
+}
+.tarjeta-oscura {
+  background-color: black;
+  color: white;
+}
+.tarjeta-amarilla {
+  background-color: yellow;
+  color: black;
+}
+.tarjeta-azul {
+  background-color: blue;
+  color: white;
+}

@@ -1,0 +1,72 @@
+//pregunta 1
+@base-color: red;
+
+.alert {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    color: white;
+    &.info {
+        background-color: lighten(@base-color, 15%);
+    }
+    &.success {
+        background-color: spin(@base-color, 100);
+    }
+    &.warning {
+        background-color: spin(@base-color, 40);
+    }
+    &.danger {
+        background-color: spin(@base-color, -150);
+        animation: danger-border 1s infinite;
+    }
+}
+
+@keyframes danger-border {
+    0% {
+        border: 3px solid transparent;
+    }
+    50% {
+        border: 3px solid @base-color;
+    }
+    100% {
+        border: 3px solid transparent;
+    }
+}
+//pregunta 2
+.generar-cards(@i) when (@i > 0) {
+    .card-@{i} {
+        font-size: (16px + (@i * 2px));
+        box-shadow:
+            0 0 (@i * 5px)
+            rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    .generar-cards(@i - 1);
+}
+.generar-cards(3);
+
+//pregunta 3
+
+.contraste-texto(@color-fondo) {
+  @r: luma(@color-fondo); 
+  color: if((@r > 50%), black, white);
+}
+.tarjeta-clara {
+  background-color: white;
+  .contraste-texto(white);
+}
+.tarjeta-oscura {
+  background-color: black;
+  .contraste-texto(black);
+}
+.tarjeta-amarilla {
+  background-color: yellow;
+  .contraste-texto(yellow);
+}
+
+.tarjeta-azul {
+  background-color: blue;
+  .contraste-texto(blue);
+}
